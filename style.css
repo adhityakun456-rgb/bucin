@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffd6e7,#fff0f7);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:430px;
+    background:#fff;
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    position:relative;
+    z-index:2;
+}
+
+h1{
+    color:#ff4f8b;
+    margin-bottom:15px;
+}
+
+.typing{
+    font-size:18px;
+    font-weight:bold;
+    color:#ff5f9d;
+    min-height:28px;
+}
+
+.card{
+    background:#fff5fa;
+    padding:20px;
+    border-radius:20px;
+    margin-top:20px;
+}
+
+.card h2{
+    color:#ff4f8b;
+    margin-bottom:15px;
+}
+
+#quote{
+    line-height:1.8;
+    color:#555;
+    margin-bottom:20px;
+}
+
+button{
+    background:#ff4f8b;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    background:#ff2d73;
+}
+
+.pentol{
+    font-size:65px;
+    animation:bounce 2s infinite;
+}
+
+.pentol-text{
+    color:#ff4f8b;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+}
+
+.hearts::before{
+    content:"💖 💕 ❤️ 💗 💞";
+    position:fixed;
+    top:0;
+    left:-30%;
+    font-size:28px;
+    opacity:.25;
+    animation:moveHeart 20s linear infinite;
+}
+
+@keyframes moveHeart{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(160vw);
+    }
+  }
