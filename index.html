@@ -1,73 +1,170 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Untuk Nadin Alycia ❤️</title>
-  <link rel="stylesheet" href="gaya.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Untuk Nadin Alycia ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>❤️ Untuk Nadin Alycia ❤️</h1>
+<div class="hearts"></div>
 
-    <p class="pesan">
-      Hai Nadin Alycia 🥺💗<br>
-      Aku cuma mau bilang...
-      kamu itu spesial banget buat aku.
-    </p>
+<audio id="music" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
 
-    <button id="musikBtn">🎵 Putar Musik</button>
+<section class="hero">
 
-    <audio id="musik" loop>
-      <source src="My%20Heart%20(Lirik)%20~Acha%20%26%20Irwansyah_1747410777664.mp3" type="audio/mpeg">
-    </audio>
+<div class="glass">
 
-    <h2>💗 Stiker Buat Kamu 💗</h2>
+<h1>Untuk Nadin Alycia ❤️</h1>
 
-    <div class="stiker-container">
-      <img src="stiker_01.png">
-      <img src="stiker_02.png">
-      <img src="stiker_03.png">
-      <img src="stiker_04.png">
-      <img src="stiker_05.png">
-      <img src="stiker_06.png">
-      <img src="stiker_07.png">
-      <img src="stiker_08.png">
-      <img src="stiker_09.png">
-      <img src="stiker_10.png">
-      <img src="stiker_11.png">
-      <img src="stiker_12.png">
-      <img src="stiker_13.png">
-      <img src="stiker_14.png">
-      <img src="stiker_15.png">
-      <img src="stiker_16.png">
-      <img src="stiker_17.png">
-      <img src="stiker_18.png">
-      <img src="stiker_19.png">
-      <img src="stiker_20.png">
-    </div>
+<p class="sub">
 
-    <p class="penutup">
-      Jangan ngambek lagi yaa 😭❤️
-    </p>
-  </div>
+Hai Sayangku 🥺💗
 
-  <script>
-    const btn = document.getElementById("musikBtn");
-    const musik = document.getElementById("musik");
+<br><br>
 
-    btn.addEventListener("click", () => {
-      if (musik.paused) {
-        musik.play();
-        btn.textContent = "⏸️ Pause Musik";
-      } else {
-        musik.pause();
-        btn.textContent = "🎵 Putar Musik";
-      }
-    });
-  </script>
+Kalau kamu lagi ngambek...
+
+aku cuma mau bilang kalau aku sayang banget sama kamu.
+
+Website kecil ini aku buat khusus buat orang yang paling spesial di hidup aku.
+
+Semoga setelah baca semuanya...
+
+kamu bisa senyum lagi yaa ❤️
+
+</p>
+
+<div class="btn-group">
+
+<button onclick="playMusic()">
+🎵 Putar Musik
+</button>
+
+<button onclick="nextSlide()">
+💖 Mulai
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="slide1" class="slide">
+
+<div class="card">
+
+<h2>🌸 Hai Cantik 🌸</h2>
+
+<p>
+
+Kalau akhir-akhir ini aku banyak salah...
+
+aku minta maaf ya sayang.
+
+Aku gak pernah berniat bikin kamu sedih.
+
+Aku cuma manusia yang masih banyak kurangnya.
+
+Tapi satu hal yang gak pernah berubah...
+
+aku tetap sayang sama kamu.
+
+🤍
+
+</p>
+
+</div>
+
+</section>
+
+<section id="slide2" class="slide">
+
+<div class="card">
+
+<h2>💖 Kenapa Kamu?</h2>
+
+<p>
+
+Karena cuma kamu yang bisa bikin hari-hari aku jadi lebih indah.
+
+Kamu selalu berhasil bikin aku ketawa.
+
+Bikin aku semangat.
+
+Bikin aku ngerasa pulang.
+
+Dan aku bersyukur banget dipertemukan sama kamu.
+
+🥺❤️
+
+</p>
+
+</div>
+
+</section>
+
+<section id="slide3" class="slide">
+
+<div class="card">
+
+<h2>💕 Happy 2nd Anniversary 💕</h2>
+
+<p>
+
+Selamat Anniversary yang ke-2 ya Sayang.
+
+Terima kasih udah bertahan sejauh ini.
+
+Terima kasih udah selalu ada.
+
+Semoga hubungan kita semakin kuat.
+
+Semakin dewasa.
+
+Semakin bahagia.
+
+Dan semoga suatu hari nanti...
+
+semua mimpi kita bisa jadi kenyataan.
+
+Aku sayang kamu.
+
+Hari ini.
+
+Besok.
+
+Dan selamanya.
+
+❤️
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+Made with ❤️ only for
+
+<b>Nadin Alycia</b>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
