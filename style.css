@@ -1,108 +1,200 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background:linear-gradient(135deg,#ffd6e7,#fff0f7);
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffd6e7, #fff0f7, #ffe4ef);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  padding: 20px;
 }
 
-.container{
-    width:90%;
-    max-width:430px;
-    background:#fff;
-    border-radius:25px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-    position:relative;
-    z-index:2;
+.container {
+  width: 92%;
+  max-width: 430px;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 28px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(255, 90, 150, 0.25);
+  position: relative;
+  overflow: hidden;
 }
 
-h1{
-    color:#ff4f8b;
-    margin-bottom:15px;
+.container::before {
+  content: "💗";
+  position: absolute;
+  font-size: 90px;
+  opacity: 0.08;
+  top: -25px;
+  left: -15px;
+  transform: rotate(-20deg);
 }
 
-.typing{
-    font-size:18px;
-    font-weight:bold;
-    color:#ff5f9d;
-    min-height:28px;
+.container::after {
+  content: "💕";
+  position: absolute;
+  font-size: 80px;
+  opacity: 0.08;
+  bottom: -25px;
+  right: -10px;
+  transform: rotate(20deg);
 }
 
-.card{
-    background:#fff5fa;
-    padding:20px;
-    border-radius:20px;
-    margin-top:20px;
+h1 {
+  color: #ff4f91;
+  font-size: 27px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
 }
 
-.card h2{
-    color:#ff4f8b;
-    margin-bottom:15px;
+h2 {
+  color: #ff639d;
+  font-size: 20px;
+  margin: 18px 0 10px;
 }
 
-#quote{
-    line-height:1.8;
-    color:#555;
-    margin-bottom:20px;
+p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 15px;
+  position: relative;
+  z-index: 2;
 }
 
-button{
-    background:#ff4f8b;
-    color:white;
-    border:none;
-    padding:12px 22px;
-    border-radius:50px;
-    cursor:pointer;
-    font-size:16px;
-    transition:.3s;
+.mengetik {
+  min-height: 45px;
+  color: #ff4f91;
+  font-weight: 600;
+  margin: 10px 0;
 }
 
-button:hover{
-    transform:scale(1.05);
-    background:#ff2d73;
+.kartu {
+  background: #fff4f8;
+  border: 1px solid #ffd0e1;
+  border-radius: 20px;
+  padding: 18px;
+  margin-top: 18px;
+  box-shadow: 0 8px 20px rgba(255, 100, 160, 0.12);
+  position: relative;
+  z-index: 2;
 }
 
-.pentol{
-    font-size:65px;
-    animation:bounce 2s infinite;
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  margin: 8px 4px;
+  background: #ff5c9b;
+  color: white;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 80, 140, 0.25);
+  transition: 0.25s;
 }
 
-.pentol-text{
-    color:#ff4f8b;
-    font-weight:bold;
-    margin-top:10px;
+button:hover {
+  transform: translateY(-2px) scale(1.03);
 }
 
-@keyframes bounce{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-12px);}
+button:active {
+  transform: scale(0.96);
 }
 
-.hearts::before{
-    content:"💖 💕 ❤️ 💗 💞";
-    position:fixed;
-    top:0;
-    left:-30%;
-    font-size:28px;
-    opacity:.25;
-    animation:moveHeart 20s linear infinite;
+/* 💕 HATI TERBANG */
+.hati {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
 }
 
-@keyframes moveHeart{
-    from{
-        transform:translateX(0);
-    }
-    to{
-        transform:translateX(160vw);
-    }
+.hati span {
+  position: absolute;
+  bottom: -40px;
+  font-size: 22px;
+  animation: naik 5s linear forwards;
+}
+
+@keyframes naik {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
   }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* 💌 EFEK KARTU */
+.kartu {
+  animation: muncul 0.8s ease;
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 💗 STIKER */
+.stiker {
+  width: 95px;
+  height: 95px;
+  object-fit: contain;
+  margin: 12px auto;
+  display: block;
+  animation: goyang 2.5s ease-in-out infinite;
+}
+
+@keyframes goyang {
+  0%, 100% {
+    transform: rotate(-4deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(4deg) scale(1.06);
+  }
+}
+
+/* 📱 HP */
+@media (max-width: 480px) {
+  .container {
+    width: 96%;
+    padding: 25px 17px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .stiker {
+    width: 85px;
+    height: 85px;
+  }
+    }
