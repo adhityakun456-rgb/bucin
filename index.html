@@ -3,175 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Untuk Nadin Alycia ❤️</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ffd6e7, #fff0f6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow-x: hidden;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 430px;
-      background: rgba(255,255,255,0.9);
-      border-radius: 25px;
-      padding: 28px 20px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
-
-    h1 {
-      color: #ff4f91;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      color: #777;
-      font-size: 15px;
-    }
-
-    .message {
-      margin: 20px 0;
-      line-height: 1.7;
-      color: #444;
-    }
-
-    .sticker {
-      width: 150px;
-      max-width: 70%;
-      margin: 10px auto 15px;
-      display: block;
-      border-radius: 15px;
-    }
-
-    button {
-      border: none;
-      background: #ff4f91;
-      color: white;
-      padding: 12px 22px;
-      border-radius: 30px;
-      font-size: 15px;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(255,79,145,0.3);
-    }
-
-    button:hover {
-      transform: scale(1.04);
-    }
-
-    #pesanRahasia {
-      display: none;
-      margin-top: 18px;
-      color: #ff4f91;
-      font-weight: bold;
-      line-height: 1.6;
-    }
-
-    .heart {
-      position: fixed;
-      bottom: -20px;
-      animation: naik 5s linear forwards;
-      pointer-events: none;
-    }
-
-    @keyframes naik {
-      from {
-        transform: translateY(0);
-        opacity: 1;
-      }
-
-      to {
-        transform: translateY(-110vh);
-        opacity: 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="gaya.css">
 </head>
 
 <body>
 
   <div class="container">
-
     <h1>❤️ Untuk Nadin Alycia ❤️</h1>
 
-    <p class="subtitle">
-      Ada sesuatu kecil yang mau gue kasih buat lo...
+    <p class="pesan">
+      Hai Nadin Alycia 🥺💗<br>
+      Aku cuma mau bilang...
+      kamu itu spesial banget buat aku.
     </p>
 
-    <!-- STIKER -->
-    <img src="stiker.png" class="sticker" alt="Stiker lucu">
+    <button id="musikBtn">🎵 Putar Musik</button>
 
-    <div class="message">
-      <p>
-        Nadin Alycia,
-        mungkin website ini sederhana banget,
-        tapi bikinnya sambil mikirin lo wkwk 😭❤️
-      </p>
-
-      <p>
-        Semoga hari lo selalu menyenangkan.
-        Jangan ngambek terus dong 😭
-      </p>
-    </div>
-
-    <button onclick="tampilkanPesan()">
-      Klik kalau masih ngambek 😭❤️
-    </button>
-
-    <div id="pesanRahasia">
-      Kalau masih ngambek juga...
-      yaudah sini, gue bujuk lagi 😭❤️
-      <br><br>
-      — dari orang yang bikin website ini khusus buat Nadin Alycia.
-    </div>
-
-    <!-- MUSIK INSTRUMENTAL -->
     <audio id="musik" loop>
-      <source src="instrumen.mp3" type="audio/mpeg">
+      <source src="My%20Heart%20(Lirik)%20~Acha%20%26%20Irwansyah_1747410777664.mp3" type="audio/mpeg">
     </audio>
 
+    <h2>💗 Stiker Buat Kamu 💗</h2>
+
+    <div class="stiker-container">
+      <img src="stiker_01.png">
+      <img src="stiker_02.png">
+      <img src="stiker_03.png">
+      <img src="stiker_04.png">
+      <img src="stiker_05.png">
+      <img src="stiker_06.png">
+      <img src="stiker_07.png">
+      <img src="stiker_08.png">
+      <img src="stiker_09.png">
+      <img src="stiker_10.png">
+      <img src="stiker_11.png">
+      <img src="stiker_12.png">
+      <img src="stiker_13.png">
+      <img src="stiker_14.png">
+      <img src="stiker_15.png">
+      <img src="stiker_16.png">
+      <img src="stiker_17.png">
+      <img src="stiker_18.png">
+      <img src="stiker_19.png">
+      <img src="stiker_20.png">
+    </div>
+
+    <p class="penutup">
+      Jangan ngambek lagi yaa 😭❤️
+    </p>
   </div>
 
   <script>
-    function tampilkanPesan() {
-      document.getElementById("pesanRahasia").style.display = "block";
+    const btn = document.getElementById("musikBtn");
+    const musik = document.getElementById("musik");
 
-      const musik = document.getElementById("musik");
-      musik.play().catch(() => {});
-
-      buatHati();
-    }
-
-    function buatHati() {
-      for (let i = 0; i < 12; i++) {
-        const hati = document.createElement("div");
-
-        hati.className = "heart";
-        hati.innerHTML = "❤️";
-
-        hati.style.left = Math.random() * 100 + "vw";
-        hati.style.fontSize = (15 + Math.random() * 20) + "px";
-        hati.style.animationDuration = (3 + Math.random() * 3) + "s";
-
-        document.body.appendChild(hati);
-
-        setTimeout(() => {
-          hati.remove();
-        }, 6000);
+    btn.addEventListener("click", () => {
+      if (musik.paused) {
+        musik.play();
+        btn.textContent = "⏸️ Pause Musik";
+      } else {
+        musik.pause();
+        btn.textContent = "🎵 Putar Musik";
       }
-    }
+    });
   </script>
 
 </body>
