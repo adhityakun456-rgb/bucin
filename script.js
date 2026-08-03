@@ -1,112 +1,35 @@
-const typingText = "Selamat datang Nadine Alycia ❤️";
-let i = 0;
+function tampilkanPesan() {
+  const pesan = document.getElementById("pesanRahasia");
+  const musik = document.getElementById("musik");
 
-function typeEffect() {
-    if (i < typingText.length) {
-        document.querySelector(".typing").innerHTML += typingText.charAt(i);
-        i++;
-        setTimeout(typeEffect, 80);
-    }
+  if (pesan) {
+    pesan.style.display = "block";
+  }
+
+  if (musik) {
+    musik.play().catch(() => {
+      console.log("Musik menunggu interaksi pengguna.");
+    });
+  }
+
+  buatHati();
 }
 
-window.onload = function () {
-    typeEffect();
-};
+function buatHati() {
+  for (let i = 0; i < 15; i++) {
+    const hati = document.createElement("div");
 
-const quotes = [
+    hati.className = "heart";
+    hati.innerHTML = "❤️";
 
-`🌅 Selamat Pagi Nadine Alycia ❤️
+    hati.style.left = Math.random() * 100 + "vw";
+    hati.style.fontSize = (15 + Math.random() * 20) + "px";
+    hati.style.animationDuration = (3 + Math.random() * 3) + "s";
 
-Semoga pagi ini membawa kebahagiaan baru untukmu.
-Jangan lupa sarapan ya cantik.
-Aku harap senyummu selalu menghiasi harimu.
-Semangat menjalani aktivitas hari ini.
-Aku selalu mendoakanmu.`,
+    document.body.appendChild(hati);
 
-`☀️ Selamat Siang Nadine Alycia ❤️
-
-Semoga hari ini berjalan lancar.
-Kalau capek jangan lupa istirahat ya.
-Aku bangga sama kamu.
-Tetap semangat cantikku.`,
-
-`🌇 Selamat Sore Nadine Alycia ❤️
-
-Terima kasih sudah berjuang hari ini.
-Semoga rasa lelahmu segera hilang.
-Aku selalu ada buat kamu.`,
-
-`🌙 Selamat Malam Nadine Alycia ❤️
-
-Selamat beristirahat.
-Semoga tidurmu nyenyak.
-Mimpi indah ya sayang.
-Aku akan selalu mendoakanmu.`,
-
-`❤️
-
-Aku mungkin bukan orang yang sempurna.
-
-Tapi aku akan selalu berusaha menjadi alasan kamu tersenyum setiap hari.`,
-
-`🥰
-
-Kalau dunia sedang tidak baik-baik saja,
-
-ingat masih ada aku yang selalu sayang sama kamu.`,
-
-`💖
-
-Aku tidak tahu masa depan seperti apa.
-
-Yang aku tahu...
-
-aku ingin kamu selalu ada di dalamnya.`,
-
-`🌸
-
-Senyummu adalah alasan kenapa hariku selalu terasa indah.`,
-
-`🥹
-
-Terima kasih sudah hadir di hidupku.
-
-Aku bersyukur dipertemukan denganmu.`,
-
-`💕
-
-Semoga kita selalu diberi kesehatan,
-
-kebahagiaan,
-
-dan bisa terus bersama.`
-
-];
-
-function randomQuote(){
-
-const random = Math.floor(Math.random()*quotes.length);
-
-document.getElementById("quote").innerHTML = quotes[random];
-
-const pentol = [
-
-"🥟 Pentol : Semangat ya cantikk ❤️",
-
-"🥟 Pentol : Jangan lupa makan 😆",
-
-"🥟 Pentol : Aku jagain dari jauh ya ❤️",
-
-"🥟 Pentol : Jangan sedih yaa 🥹",
-
-"🥟 Pentol : Senyum dong cantik 😍",
-
-"🥟 Pentol : Aku sayang Nadine ❤️"
-
-];
-
-const p = Math.floor(Math.random()*pentol.length);
-
-document.querySelector(".pentol-text").innerHTML = pentol[p];
-
+    setTimeout(() => {
+      hati.remove();
+    }, 6000);
+  }
 }
